@@ -1,0 +1,61 @@
+---
+title: "Presentation UN"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Objectifs
+
+* Versionner un modèle de présentation et utiliser xaringan.
+
+* Inciter les étudiant à regarder plus tôt git, tidyverse et caret.
+
+## To Do
+
+* Inclure un script d'utilisation du tidyverse / data.table ?
+
+* Inclure/pointer vers demo de rstudio connect ?
+
+
+__lm classique__ exemple pris de http://varianceexplained.org/r/broom-intro/
+
+
+```{r}
+fit <- lm(mpg ~ wt + qsec, mtcars)
+summary(fit)
+```
+
+__tidy model__ permet de rassembler les stats des modèles dans un data.frame (tidy ~ ranger en anglais).
+
+```{r}
+suppressPackageStartupMessages( library(broom) )
+tidy(fit)
+```
+
+Inspecter les performances par observations :
+
+```{r}
+head(augment(fit))
+```
+
+
+Performances global du modèle :
+
+```{r}
+glance(fit)
+```
+
+Et ainsi faire une vis sur les paramètres du modèles avec intervalles de confiances :
+
+```{r}
+suppressPackageStartupMessages( library(ggplot2) )
+td <- tidy(fit, conf.int = TRUE)
+ggplot(td, aes(estimate, term, color = term)) +
+    geom_point() +
+    geom_errorbarh(aes(xmin = conf.low, xmax = conf.high)) +
+    geom_vline( xintercept = 0 )
+```
+
