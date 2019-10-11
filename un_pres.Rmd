@@ -188,7 +188,7 @@ class: inverse, center, middle
 
 __De l'open source français__
 * http://larmarange.github.io/analyse-R/ (apprendre en français)
-* https://github.com/dreamRs/esquisse ; https://github.com/ThinkR-open/golem ;
+* https://github.com/dreamRs/esquisse ; https://github.com/ThinkR-open/golem 
 
 __Comment créer un package R en ~ 2 mn__
 * https://thinkr.fr/creer-package-r-quelques-minutes/
