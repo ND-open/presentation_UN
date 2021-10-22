@@ -20,6 +20,12 @@ git submodule add https://github.com/hakimel/reveal.js.git reveal.js
 jupyter nbconvert --to slides index.ipynb --reveal-prefix=reveal.js --SlidesExporter.reveal_theme=serif --SlidesExporter.reveal_scroll=True --SlidesExporter.reveal_transition=none
 ```
 
+En cas de pb renommer à la main le fichier `index.slides.html` en `index.html` ou renommer avec un
+
+```
+mv index.slides.html index.html
+```
+
 Créer une branche `gh-pages` pour exposer avec Github pages de manière automatique.
 
 ## Références
