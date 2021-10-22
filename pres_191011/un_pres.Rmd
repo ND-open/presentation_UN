@@ -72,7 +72,7 @@ class: inverse, center, middle
 Un consultant est un prestataire de services en conseil. Les consultants sont souvent regroupés au sein de sociétés de conseil, ou bien interviennent de façon indépendante. Il dispose d'un savoir-faire avéré dans un domaine bien précis sans pour autant être spécialiste. [https://fr.wikipedia.org/wiki/Consultant]
 
 --
-## Mon Entreprise
+## L'Entreprise
 
 __Next Decision__ est un "Cabinet d'experts en Informatique Décisionnelle & Big Data, Master Data Management (MDM), et Elaboration Budgétaire".
 
