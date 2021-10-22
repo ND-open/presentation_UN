@@ -17,6 +17,7 @@ Pour exposer les slides sur Github pages, renommer le notebook `index.ipynb` et 
 
 ```
 git submodule add https://github.com/hakimel/reveal.js.git reveal.js
+jupyter nbconvert --to slides index.ipynb --reveal-prefix=reveal.js --SlidesExporter.reveal_theme=serif --SlidesExporter.reveal_scroll=True --SlidesExporter.reveal_transition=none
 ```
 
 Créer une branche `gh-pages` pour exposer avec Github pages de manière automatique.
